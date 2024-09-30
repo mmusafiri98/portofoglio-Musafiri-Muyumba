@@ -121,13 +121,33 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 0rem;
+            font-size: 20px;
         }
 
         .about__img {
+
             width: 300px;
             border-radius: 50%;
             margin: 1rem 0;
+        }
+
+        .about__img {
+            display: block;
+            /* Permet de centrer l'image */
+            margin: 20px auto;
+            /* Centre l'image horizontalement */
+            width: 50%;
+            /* Ajustez la taille selon vos préférences */
+            transition: transform 0.3s ease;
+            /* Ajout d'un effet au survol */
+        }
+
+        .about__img:hover {
+            transform: scale(1.05);
+            /* Zoom léger sur l'image au survol */
+            cursor: pointer;
+            /* Changement de curseur pour indiquer un lien */
         }
 
         .about__data {
@@ -138,6 +158,10 @@
         .about__description {
             margin-top: 1rem;
             color: #fff;
+        }
+
+        .href {
+            background-color: antiquewhite;
         }
     </style>
 
@@ -165,8 +189,9 @@
         <!--==================== ABOUT ====================-->
         <section class="about section" id="about">
             <div class="about__content">
-                <h1>WEB DEVELOPPEUR</h1>
+
                 <img src="pepe profile.jpg" alt="Ma photo" class="about__img">
+                <h1>WEB DEVELOPPEUR</h1>
             </div>
             <div class="about__data">
                 <h2 class="section__title">À propos de moi</h2>
@@ -198,35 +223,56 @@
         <!--==================== PROJECTS ====================-->
         <section class="projects section" id="projects">
             <h2 class="section__title">Mes Projets</h2>
+
             <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé des intelligence artificiales des
-                chatbot large language model le premiere avec du html et css et javascript cote frontend et la partie
-                backend php et le deuxieme application chatbot AI j ai utilise le framework flask partie backend et
-                frontend html et css et javascript </p>
-            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé une ientelligence artificiales
-                capable de genere des images
-            </p>
-            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé une todo list avec javascript et
-                html et css cote frontend et cote backend le Node.js
-            </p>
-            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé une calculatrice avec du frontend
-                avec du html et css et javascript
-            </p>
-            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé une jeux de tetris avec du
-                frontend
-                avec du html et css et javascript
-            </p>
-            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé une site web pour une patissiere
-                en italie
-            </p>
-            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé une site web des ventes des
-                chausseurs
-            </p>
-            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé une
-            </p>
-            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé une site web pour une ville une
-                italie qui s appel Verduno
-            </p>
+                chatbot large language model en html, css, et javascript côté frontend et serveur PHP avec une API de
+                génération de texte et pour le login des utilisateur pour accede a mon application pour la gestionn.</p>
+            <a href="https://webdev05.masterthecode.eu/NeoTech%20AI/versus%20ai.php" target="_blank">
+                <img src="robotai.jpg" alt="Projet Chatbot AI" class="about__img">
+            </a>
+
+            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé une intelligence artificielle
+                capable de générer des images à partir d'un prompt fait par l'utilisateur.</p>
+            <a href="https://webdev05.masterthecode.eu/imagine-Art/imagineArt.php" target="_blank">
+                <img src="image.jpg" alt="Projet génération d'images" class="about__img">
+            </a>
+
+            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé une todo list avec Javascript.</p>
+            <a href="URL_TODO_LIST_PROJECT" target="_blank">
+                <img src="Note.jpg" alt="Projet Todo List" class="about__img">
+            </a>
+
+            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé une calculatrice scientifique avec
+                frontend en HTML, CSS et Javascript, et backend en PHP.</p>
+            <a href="https://webdev05.masterthecode.eu/calculatrice/calculatrice.html" target="_blank">
+                <img src="calcolatrice.jpg" alt="Projet Calculatrice Scientifique" class="about__img">
+            </a>
+
+            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé un jeu de Tetris avec du frontend
+                en HTML, CSS et Javascript.</p>
+            <a href="https://webdev05.masterthecode.eu/tetris%20game/regle.html" target="_blank">
+                <img src="tetris.jpg" alt="Projet Tetris" class="about__img">
+            </a>
+
+            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé un site web pour une pâtissière en
+                Italie.</p>
+            <a href="https://mmusafiri98.github.io/Fuori-dal-comune/" target="_blank">
+                <img src="patissierie.jpg" alt="Projet Pâtisserie" class="about__img">
+            </a>
+
+            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé un site web de vente de
+                chaussures.</p>
+            <a href="https://mmusafiri98.github.io/zack/" target="_blank">
+                <img src="scarpe.jpg" alt="Projet Vente de Chaussures" class="about__img">
+            </a>
+
+            <p class="section__subtitle">Quelques projets sur lesquels j'ai travaillé un site web pour une ville en
+                Italie, Verduno, en utilisant WordPress.</p>
+            <a href="https://webdev05.masterthecode.eu/site-verduno/" target="_blank">
+                <img src="paessaggio.jpg" alt="Projet Verduno" class="about__img">
+            </a>
         </section>
+
 
         <!--==================== CONTACT ====================-->
         <section class="contact section" id="contact">
