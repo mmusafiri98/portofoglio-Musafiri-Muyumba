@@ -5,7 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio — Musafiri Muyumba</title>
+
+    <!-- ✅ Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- ✅ Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- ✅ Google Translate -->
     <script type="text/javascript">
@@ -17,54 +22,25 @@
             }, 'google_translate_element');
         }
     </script>
-    <script type="text/javascript"
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #0a0a0f, #1a1b29);
             color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             min-height: 100vh;
-            padding: 2rem;
-            flex-direction: column;
+            padding: 2rem 0;
         }
 
-        /* ✅ Barre de sélection de langue */
-        #google_translate_element {
-            margin-bottom: 1.5rem;
-        }
-
-        .card {
+        .card-custom {
             background: linear-gradient(145deg, #2a2b3d, #1c1c28);
-            width: 100%;
-            max-width: 800px;
             border-radius: 20px;
-            padding: 2.5rem;
+            padding: 2rem;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
         }
 
-        .header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            text-align: center;
-        }
-
-        .header img {
+        .profile-img {
             width: 130px;
             height: 130px;
             border-radius: 50%;
@@ -73,68 +49,13 @@
             box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
         }
 
-        .name {
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-
         .role {
             background: #8a2be2;
             padding: 0.3rem 1rem;
             border-radius: 20px;
             font-size: 0.9rem;
-            color: #fff;
             display: inline-block;
-        }
-
-        .contact {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            font-size: 0.9rem;
-            color: #ccc;
-        }
-
-        .contact a {
-            color: #ccc;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .contact a:hover {
-            color: #8a2be2;
-        }
-
-        .info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-
-        .section {
-            flex: 1 1 45%;
-        }
-
-        .section h3 {
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            border-left: 4px solid #8a2be2;
-            padding-left: 10px;
-        }
-
-        .section p {
-            font-size: 0.95rem;
-            color: #ddd;
-            line-height: 1.6;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-            margin-top: 0.8rem;
+            color: #fff;
         }
 
         .skill {
@@ -143,115 +64,171 @@
             border-radius: 10px;
             font-size: 0.85rem;
             color: #e0e0e0;
+            margin: 0.25rem;
+            display: inline-block;
         }
 
-        @media (max-width: 768px) {
-            .info {
-                flex-direction: column;
-            }
+        h3 {
+            border-left: 4px solid #8a2be2;
+            padding-left: 10px;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: #bbaaff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #8a2be2;
         }
     </style>
 </head>
 
 <body>
-    <!-- ✅ Sélecteur de langue automatique Google -->
-    <div id="google_translate_element"></div>
+    <!-- ✅ Sélecteur de langue -->
+    <div id="google_translate_element" class="text-center mb-4"></div>
 
-    <div class="card">
-        <div class="header">
-            <img src="pepe profile.jpg" alt="Photo de profil" />
-            <div class="name">Musafiri Muyumba</div>
-            <div class="role">Développeur Web</div>
-            <div class="contact">
-                <a href="mailto:tygamusafiri36@gmail.com">tygamusafiri36@gmail.com</a> |
-                <span>📍 Belgique</span> |
-                <span>📞 +32 484 43 49 47</span>
-            </div>
-        </div>
-
-        <div class="info">
-            <div class="section">
-                <h3>À propos de moi</h3>
-                <p>
-                    Je suis un développeur web passionné par la création d’expériences modernes et interactives.
-                    J’aime travailler avec des technologies telles que HTML, CSS, JavaScript, React et PHP.
-                    Ce portfolio présente mes projets et mon parcours dans le développement web
-                    et la conception de logiciels pour ordinateurs.
-                </p>
-
-                <h3>Éducation</h3>
-                <p><strong>Institut Paul Hankar</strong><br>Diplôme de développeur web</p>
-                <p><strong>Université libre de Bruxelles</strong><br>Bachelier en sciences informatiques</p>
-                <p><strong>Université libre de Bruxelles</strong><br>Bachelier en sciences pharmaceutiques</p>
-
-                <h3>Expérience</h3>
-                <p>
-                    <strong>UI/UX Designer</strong> — Création de designs modernes et intuitifs.<br>
-                    <strong>Développeur Web</strong> — Conception de sites et d’applications dynamiques.<br><br>
-
-                    <strong>Développeur logiciel</strong> — Conception d’applications de bureau modernes et
-                    fonctionnelles, adaptées à différents besoins.<br><br>
-
-                    <strong>Développeur en intelligence artificielle</strong> — Création de modèles d’IA utilisant
-                    le machine learning, le deep learning, PyTorch et TensorFlow. Expérience dans l’intégration
-                    d’API de modèles pré-entraînés et le web scraping pour la récupération de données en ligne.<br><br>
-
-                    <strong>Développeur en automatisation</strong> — Conception de systèmes automatisés interagissant
-                    avec des services web tels que Google Calendar, OpenAI, Gmail et bien d’autres.
-                </p>
+    <div class="container">
+        <div class="card-custom mx-auto">
+            <div class="text-center mb-4">
+                <img src="pepe profile.jpg" alt="Photo de profil" class="profile-img mb-3" />
+                <h2 class="fw-semibold">Musafiri Muyumba</h2>
+                <span class="role">Développeur Web</span>
+                <div class="mt-3">
+                    <a href="mailto:tygamusafiri36@gmail.com">tygamusafiri36@gmail.com</a> |
+                    📍 Belgique |
+                    📞 +32 484 43 49 47
+                </div>
             </div>
 
-            <div class="section">
-                <h3>Compétences & Outils</h3>
+            <div class="row gy-4">
+                <!-- À propos / Expérience -->
+                <div class="col-12 col-lg-6">
+                    <h3>À propos de moi</h3>
+                    <p>
+                        Je suis un développeur web passionné par la création d’expériences modernes et interactives.
+                        J’aime travailler avec des technologies telles que HTML, CSS, JavaScript, React et PHP.
+                        Ce portfolio présente mes projets et mon parcours dans le développement web
+                        et la conception de logiciels.
+                    </p>
 
-                <p><strong>Design :</strong></p>
-                <div class="skills">
-                    <div class="skill">Figma</div>
-                    <div class="skill">Photoshop</div>
-                    <div class="skill">Illustrator</div>
+                    <h3>Éducation</h3>
+                    <p><strong>Institut Paul Hankar</strong><br>Diplôme de développeur web</p>
+                    <p><strong>Université libre de Bruxelles</strong><br>Bachelier en sciences informatiques</p>
+                    <p><strong>Université libre de Bruxelles</strong><br>Bachelier en sciences pharmaceutiques</p>
+
+                    <h3>Expérience</h3>
+                    <p>
+                        <strong>UI/UX Designer</strong> — Création de designs modernes et intuitifs.<br>
+                        <strong>Développeur Web</strong> — Conception de sites et d’applications dynamiques.<br><br>
+
+                        <strong>Développeur logiciel</strong> — Création d’applications de bureau modernes et
+                        fonctionnelles.<br><br>
+
+                        <strong>Développeur en intelligence artificielle</strong> — Création de modèles d’IA avec
+                        PyTorch et TensorFlow, intégration d’API et web scraping.<br><br>
+
+                        <strong>Développeur en automatisation</strong> — Conception de systèmes automatisés
+                        interagissant avec Google Calendar, OpenAI, Gmail, etc.
+                    </p>
                 </div>
 
-                <p><strong>Langages :</strong></p>
-                <div class="skills">
-                    <div class="skill">HTML</div>
-                    <div class="skill">CSS</div>
-                    <div class="skill">JavaScript</div>
-                    <div class="skill">PHP</div>
-                    <div class="skill">Python</div>
-                    <div class="skill">C++</div>
-                    <div class="skill">SQL</div>
-                    <div class="skill">PostgreSQL</div>
-                </div>
+                <!-- Compétences & Projets -->
+                <div class="col-12 col-lg-6">
+                    <h3>Compétences & Outils</h3>
 
-                <p><strong>Frameworks :</strong></p>
-                <div class="skills">
-                    <div class="skill">React.js</div>
-                    <div class="skill">Node.js</div>
-                    <div class="skill">Flask</div>
-                    <div class="skill">Laravel</div>
-                    <div class="skill">TensorFlow</div>
-                    <div class="skill">PyTorch</div>
-                    <div class="skill">Bootstrap</div>
-                    <div class="skill">PyQt5</div>
-                    <div class="skill">Symfony</div>
-                </div>
+                    <p><strong>Design :</strong></p>
+                    <div>
+                        <span class="skill">Figma</span><span class="skill">Photoshop</span><span
+                            class="skill">Illustrator</span>
+                    </div>
 
-                <p><strong>Édition vidéo :</strong></p>
-                <div class="skills">
-                    <div class="skill">Filmora</div>
-                    <div class="skill">Premiere Pro</div>
-                    <div class="skill">After Effects</div>
-                    <div class="skill">CapCut</div>
-                    <div class="skill">VideoMaker</div>
-                </div>
+                    <p><strong>Langages :</strong></p>
+                    <div>
+                        <span class="skill">HTML</span><span class="skill">CSS</span><span
+                            class="skill">JavaScript</span>
+                        <span class="skill">PHP</span><span class="skill">Python</span><span class="skill">C++</span>
+                        <span class="skill">SQL</span><span class="skill">PostgreSQL</span>
+                    </div>
 
-                <p><strong>Automatisation web :</strong></p>
-                <div class="skills">
-                    <div class="skill">Make Automation</div>
+                    <p><strong>Frameworks :</strong></p>
+                    <div>
+                        <span class="skill">React.js</span><span class="skill">Node.js</span><span
+                            class="skill">Flask</span>
+                        <span class="skill">Laravel</span><span class="skill">TensorFlow</span><span
+                            class="skill">PyTorch</span>
+                        <span class="skill">Bootstrap</span><span class="skill">PyQt5</span><span
+                            class="skill">Symfony</span>
+                    </div>
+
+                    <p><strong>Édition vidéo :</strong></p>
+                    <div>
+                        <span class="skill">Filmora</span><span class="skill">Premiere Pro</span><span
+                            class="skill">After Effects</span>
+                        <span class="skill">CapCut</span><span class="skill">VideoMaker</span>
+                    </div>
+
+                    <p><strong>Automatisation web :</strong></p>
+                    <div><span class="skill">Make Automation</span></div>
+
+                    <h3>Projets personnels</h3>
+
+                    <p><strong>1. Site web de voyages :</strong></p>
+                    <p>
+                        Développement d’un site de voyages avec Vite.js et Laravel. Gestion des réservations, validation
+                        de commentaires et intégration d’un assistant virtuel intelligent (Cohere AI) pour aider les
+                        utilisateurs à trouver des destinations et hébergements. Authentification sécurisée et base
+                        MySQL avec panneau d’administration.
+                    </p>
+
+                    <p><strong>2. Moteur de recherche web :</strong></p>
+                    <p>
+                        Création d’un moteur de recherche similaire à Google Search avec React.js et API Google.
+                        Intégration d’une IA (Jargus AI) capable de résumer les résultats et d’utiliser la
+                        reconnaissance vocale pour la navigation.
+                    </p>
+
+                    <p><strong>3. Application de gestion de bibliothèque :</strong></p>
+                    <p>
+                        Application web de gestion de base de données pour une bibliothèque (HTML, CSS, JS, Node.js).
+                    </p>
+
+                    <p><strong>4. Imagine Generator AI :</strong></p>
+                    <p>
+                        Application d’IA générant des images à partir de prompts textuels. Backend en Python (Torch,
+                        Diffusion Pipeline, Pillow), frontend en Streamlit. Modèle fine-tuné par mes soins.
+                    </p>
+
+                    <p><strong>5. To-Do List :</strong></p>
+                    <p>
+                        Application web de gestion de tâches (HTML, CSS, JS, Node.js) avec interface intuitive.
+                    </p>
+
+                    <p><strong>6. Site e-commerce de chaussures :</strong></p>
+                    <p>
+                        Site de vente de chaussures en ligne (React.js + PHP). Filtrage, paiement sécurisé (PayPal,
+                        carte), base MySQL, cookies personnalisés et IA pour recommandations.
+                    </p>
+
+                    <p><strong>7. Site web sur la ville de Verdun :</strong></p>
+                    <p>
+                        Site vitrine touristique créé avec WordPress pour promouvoir la ville de Verdun.
+                    </p>
+
+                    <p><strong>8. Réseau social intelligent :</strong></p>
+                    <p>
+                        Réseau social React.js intégrant une IA de traduction automatique et un système de sécurité
+                        MySQL. IA pédagogique aidant les utilisateurs à communiquer entre langues différentes.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- ✅ Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
