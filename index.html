@@ -1,427 +1,743 @@
+
 <!DOCTYPE html>
-<html lang="it">
+<html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio — Musafiri Muyumba</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio de Musafiri Muyumba : développement web, intelligence artificielle, applications et projets personnels." />
 
-  <!-- ✅ Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <title>Portfolio — Musafiri Muyumba</title>
 
-  <!-- ✅ Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- ✅ Google Translate Script -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'it',
-        includedLanguages: 'fr,en,es,de,pt,nl', // lingue disponibili
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0a0a0f, #1a1b29);
-      color: #fff;
-      min-height: 100vh;
-      padding: 2rem 0;
-    }
+    <!-- Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'it,en,es,de,pt,nl',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
 
-    .card-custom {
-      background: linear-gradient(145deg, #2a2b3d, #1c1c28);
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    .profile-img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      border: 4px solid #8a2be2;
-      object-fit: cover;
-      box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
-    }
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0a0a0f, #1a1b29);
+            color: #fff;
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
 
-    .role {
-      background: #8a2be2;
-      padding: 0.3rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      display: inline-block;
-      color: #fff;
-    }
+        .card-custom {
+            background: linear-gradient(145deg, #2a2b3d, #1c1c28);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
 
-    .skill {
-      background: #33354a;
-      padding: 0.4rem 0.8rem;
-      border-radius: 10px;
-      font-size: 0.85rem;
-      color: #e0e0e0;
-      margin: 0.25rem;
-      display: inline-block;
-    }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid #8a2be2;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+        }
 
-    h3 {
-      border-left: 4px solid #8a2be2;
-      padding-left: 10px;
-      margin-top: 1.5rem;
-      margin-bottom: 1rem;
-    }
+        .role {
+            background: #8a2be2;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            color: #fff;
+        }
 
-    a {
-      color: #bbaaff;
-      text-decoration: none;
-    }
+        .skill {
+            background: #33354a;
+            padding: 0.4rem 0.8rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            color: #e0e0e0;
+            margin: 0.25rem;
+            display: inline-block;
+        }
 
-    a:hover {
-      color: #8a2be2;
-    }
+        h3 {
+            border-left: 4px solid #8a2be2;
+            padding-left: 10px;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
 
-    .btn-tariffe {
-      background-color: #8a2be2;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      padding: 0.8rem 1.5rem;
-      font-weight: 500;
-      transition: 0.3s;
-    }
+        a {
+            color: #bbaaff;
+            text-decoration: none;
+        }
 
-    .btn-tariffe:hover {
-      background-color: #7326c7;
-      transform: scale(1.05);
-    }
+        a:hover {
+            color: #8a2be2;
+        }
 
-    /* ✅ Style per il selettore lingua */
-    #google_translate_element {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-  </style>
+        .btn-tariffe {
+            background-color: #8a2be2;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 0.8rem 1.5rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .btn-tariffe:hover {
+            background-color: #7326c7;
+            transform: scale(1.05);
+        }
+
+        #google_translate_element {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .project {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .project-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #4f46e5, #6366f1);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 8px;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            background: linear-gradient(135deg, #7326c7, #8a2be2);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        p {
+            line-height: 1.8;
+        }
+
+        @media (max-width: 576px) {
+            .card-custom {
+                padding: 1.3rem;
+            }
+
+            .profile-img {
+                width: 110px;
+                height: 110px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <!-- ✅ Selettore di lingua -->
-  <div id="google_translate_element"></div>
 
-  <div class="container">
-    <div class="card-custom mx-auto">
-      <div class="text-center mb-4">
-        <img src="static.jpeg" alt="Foto profilo" class="profile-img mb-3" />
-        <h2 class="fw-semibold">Musafiri Muyumba</h2>
-        <span class="role">Sviluppatore Web</span>
-        <div class="mt-3">
-          <a href="mailto:tygamusafiri36@gmail.com">tygamusafiri36@gmail.com</a> 
+    <!-- Sélecteur de langue -->
+    <div id="google_translate_element"></div>
 
+    <div class="container">
+        <div class="card-custom mx-auto">
+
+            <!-- Profil -->
+            <div class="text-center mb-4">
+
+                <img src="static.jpeg"
+                     alt="Photo de profil"
+                     class="profile-img mb-3" />
+
+                <h2 class="fw-semibold">Musafiri Muyumba</h2>
+
+                <span class="role">Développeur Web</span>
+
+                <div class="mt-3">
+                    <a href="mailto:tygamusafiri36@gmail.com">
+                        tygamusafiri36@gmail.com
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="row gy-4">
+
+                <!-- Présentation et formation -->
+                <div class="col-12 col-lg-6">
+
+                    <h3>À propos de moi</h3>
+
+                    <p>
+                        Je suis un développeur web passionné par la création
+                        d'expériences numériques modernes et interactives.
+                        J'aime travailler avec des technologies telles que
+                        HTML, CSS, JavaScript, React et PHP.
+
+                        Ce portfolio présente mes projets ainsi que mon
+                        parcours dans le développement web et logiciel.
+                    </p>
+
+                    <h3>Formation</h3>
+
+                    <p>
+                        <strong>Institut Paul Hankar</strong><br>
+                        Diplôme en développement web
+                    </p>
+
+                    <p>
+                        <strong>Université libre de Bruxelles</strong><br>
+                        Études en informatique
+                    </p>
+
+                    <p>
+                        <strong>Université libre de Bruxelles</strong><br>
+                        Études en sciences pharmaceutiques
+                    </p>
+
+                    <p>
+                        <strong>Institut Velso Mucci</strong><br>
+                        Économie et gestion d'entreprise
+                    </p>
+
+                    <h3>Expérience et domaines d'activité</h3>
+
+                    <p>
+                        <strong>UI/UX Designer</strong> — Création
+                        d'interfaces modernes, intuitives et ergonomiques.
+                        <br><br>
+
+                        <strong>Développeur Web</strong> — Création de sites
+                        web et d'applications dynamiques.
+                        <br><br>
+
+                        <strong>Développeur logiciel</strong> — Conception
+                        d'applications de bureau modernes et fonctionnelles.
+                        <br><br>
+
+                        <strong>Développeur en intelligence artificielle</strong>
+                        — Création et intégration de modèles d'IA avec
+                        PyTorch et TensorFlow, intégration d'API et web scraping.
+                        <br><br>
+
+                        <strong>Développeur en automatisation</strong>
+                        — Création de systèmes automatisés intégrés avec
+                        Google Calendar, OpenAI, Gmail et d'autres services.
+                    </p>
+
+                </div>
+
+                <!-- Compétences et projets -->
+                <div class="col-12 col-lg-6">
+
+                    <h3>Compétences et outils</h3>
+
+                    <p><strong>Design et développement No-code :</strong></p>
+
+                    <div>
+                        <span class="skill">Figma</span>
+                        <span class="skill">Photoshop</span>
+                        <span class="skill">Illustrator</span>
+                        <span class="skill">WordPress</span>
+                    </div>
+
+                    <p class="mt-3">
+                        <strong>Langages de programmation :</strong>
+                    </p>
+
+                    <div>
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">PHP</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">C++</span>
+                        <span class="skill">SQL</span>
+                        <span class="skill">PostgreSQL</span>
+                    </div>
+
+                    <p class="mt-3"><strong>Frameworks et technologies :</strong></p>
+
+                    <div>
+                        <span class="skill">React.js</span>
+                        <span class="skill">Node.js</span>
+                        <span class="skill">Flask</span>
+                        <span class="skill">Laravel</span>
+                        <span class="skill">TensorFlow</span>
+                        <span class="skill">PyTorch</span>
+                        <span class="skill">Bootstrap</span>
+                        <span class="skill">PyQt5</span>
+                        <span class="skill">Symfony</span>
+                    </div>
+
+                    <p class="mt-3"><strong>Montage vidéo :</strong></p>
+
+                    <div>
+                        <span class="skill">Filmora</span>
+                        <span class="skill">Premiere Pro</span>
+                        <span class="skill">After Effects</span>
+                        <span class="skill">CapCut</span>
+                        <span class="skill">VideoMaker</span>
+                    </div>
+
+                    <h3>Projets personnels</h3>
+
+                    <!-- Projet 1 -->
+                    <div class="project">
+                        <strong>1. Living Travel — Site web de voyage</strong><br>
+
+                        Développé avec React.js, ce site de voyage propose
+                        différentes destinations aux utilisateurs, avec
+                        des prix, des offres et des possibilités de réservation.
+
+                        Le backend, développé en PHP, gère les opérations
+                        telles que les réservations et l'authentification
+                        des utilisateurs.
+
+                        Le projet comprend également un espace
+                        d'administration permettant de gérer l'ensemble du site.
+
+                        <br>
+
+                        <a href="https://mmusafiri98.github.io/oasis-holiday-fantastic-/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Découvrir le projet Living Travel
+                        </a>
+                    </div>
+
+                    <!-- Projet 2 -->
+                    <div class="project">
+                        <strong>2. JARVIS AI — Moteur de recherche intelligent</strong><br>
+
+                        J'ai développé un moteur de recherche web intégrant
+                        une intelligence artificielle appelée JARVIS AI.
+
+                        Le projet utilise HTML, CSS, JavaScript, les API
+                        de Google et les API de Cohere AI.
+
+                        J'ai personnalisé et intégré les modèles de Cohere
+                        afin de créer ma propre version de JARVIS AI.
+
+                        L'application est capable de dialoguer avec
+                        l'utilisateur grâce à une interface de chat,
+                        d'effectuer des recherches sur le web, de proposer
+                        des liens pertinents et d'ouvrir le navigateur
+                        à l'aide de commandes vocales.
+
+                        <br>
+
+                        <a href="https://php-wcgi.wasmer.app/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Découvrir le projet JARVIS AI
+                        </a>
+                    </div>
+
+                    <!-- Projet 3 -->
+                    <div class="project">
+                        <strong>3. Imagine Generator AI</strong><br>
+
+                        Application d'intelligence artificielle permettant
+                        de générer des images à partir des descriptions
+                        textuelles fournies par l'utilisateur.
+
+                        Le backend est développé en Python avec
+                        PyTorch, Diffusion Pipeline et Pillow.
+                        L'interface utilisateur est réalisée avec Streamlit.
+
+                        <br>
+
+                        <a href="https://huggingface.co/spaces/Muyumba/orion-ai?logs=container"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Tester Imagine Generator AI
+                        </a>
+                    </div>
+
+                    <!-- Projet 4 -->
+                    <div class="project">
+                        <strong>4. Site e-commerce de chaussures</strong><br>
+
+                        Site e-commerce développé avec HTML, CSS et
+                        JavaScript pour présenter et vendre des chaussures
+                        pour un commerçant nommé Zack.
+
+                        <br>
+
+                        <a href="https://mmusafiri98.github.io/zack/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Découvrir le site e-commerce
+                        </a>
+                    </div>
+
+                    <!-- Projet 5 -->
+                    <div class="project">
+                        <strong>5. Besarito — Site dédié à la ville de Verduno</strong><br>
+
+                        Site réalisé avec WordPress en collaboration
+                        avec mon ami Besar, qui se trouve à Verduno.
+
+                        L'objectif du projet est de promouvoir la ville
+                        et de présenter ses attraits aux touristes.
+
+                        <br>
+
+                        <a href="https://wordpress-wyzc4.wasmer.app"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Découvrir le projet Besarito
+                        </a>
+                    </div>
+
+                    <!-- Projet 6 -->
+                    <div class="project">
+                        <strong>6. Les Délicieux Plateau — Site de restaurant français</strong><br>
+
+                        Projet de portfolio consacré à un restaurant
+                        fictif inspiré de la gastronomie française.
+
+                        Le site présente différents menus et spécialités
+                        culinaires revisitées, avec des propositions
+                        adaptées au matin, à l'après-midi et au soir.
+
+                        Ce projet a été réalisé dans le cadre d'un
+                        travail scolaire pour une évaluation.
+
+                        <br>
+
+                        <a href="https://mmusafiri98.github.io/web-restaurant-/index.html"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Découvrir Les Délicieux Plateau
+                        </a>
+                    </div>
+
+                    <!-- Projet 7 -->
+                    <div class="project">
+                        <strong>7. Jeu d'échecs</strong><br>
+
+                        J'ai développé un jeu d'échecs interactif
+                        en utilisant HTML, CSS et JavaScript.
+
+                        <br>
+
+                        <a href="https://mmusafiri98.github.io/chess-game-/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Jouer aux échecs
+                        </a>
+                    </div>
+
+                    <!-- Projet 8 -->
+                    <div class="project">
+                        <strong>8. Réseau social Netveb</strong><br>
+
+                        Application de réseau social développée avec React.js,
+                        inspirée de Facebook.
+
+                        Les utilisateurs peuvent créer un compte,
+                        s'inscrire et partager des informations
+                        avec les autres membres.
+
+                        <br>
+
+                        <a href="https://netveb.netlify.app"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Découvrir Netveb
+                        </a>
+                    </div>
+
+                    <!-- Projet 9 -->
+                    <div class="project">
+                        <strong>9. Jeu de ping-pong</strong><br>
+
+                        Jeu interactif de ping-pong développé
+                        pour permettre aux utilisateurs de jouer
+                        directement depuis leur navigateur.
+
+                        <br>
+
+                        <a href="https://ping-pong.wasmer.app"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Tester le jeu de ping-pong
+                        </a>
+                    </div>
+
+                    <!-- Projet 10 -->
+                    <div class="project">
+                        <strong>10. Escape Game</strong><br>
+
+                        Jeu d'évasion développé avec HTML, CSS
+                        et JavaScript. Le joueur doit résoudre
+                        des défis et trouver une issue.
+
+                        <br>
+
+                        <a href="https://mmusafiri98.github.io/gioco-di-Escape-game-/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Tester Escape Game
+                        </a>
+                    </div>
+
+                    <!-- Projet 11 -->
+                    <div class="project">
+                        <strong>11. Labyrinth 2D</strong><br>
+
+                        Un autre jeu d'évasion que j'ai développé
+                        avec HTML, CSS et JavaScript.
+
+                        Le joueur doit parcourir un labyrinthe
+                        en évitant les obstacles pour atteindre
+                        la sortie.
+
+                        <br>
+
+                        <a href="https://labyrinth-2d.wasmer.app/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Tester Labyrinth 2D
+                        </a>
+                    </div>
+
+                    <!-- Projet 12 -->
+                    <div class="project">
+                        <strong>12. Tetris Game</strong><br>
+
+                        Jeu de Tetris développé avec HTML, CSS
+                        et JavaScript. Le joueur doit assembler
+                        les blocs afin de compléter des lignes.
+
+                        <br>
+
+                        <a href="https://mmusafiri98.github.io/Tetris-Game/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Jouer à Tetris
+                        </a>
+                    </div>
+
+                    <!-- Projet 13 -->
+                    <div class="project">
+                        <strong>13. Vision AI — Intelligence artificielle d'analyse d'images</strong><br>
+
+                        J'ai développé une intelligence artificielle
+                        appelée Vision AI, capable d'analyser des images,
+                        de les décrire en détail et de les modifier.
+
+                        Pour ce projet, j'ai utilisé le framework
+                        Streamlit afin de créer l'application et
+                        d'intégrer les fonctionnalités de plusieurs
+                        modèles d'intelligence artificielle.
+
+                        Pour rendre Vision AI plus complète,
+                        j'ai combiné quatre modèles différents :
+
+                        <ul>
+                            <li>
+                                Un modèle linguistique capable de comprendre
+                                les textes envoyés par l'utilisateur,
+                                d'analyser les émotions et de formuler
+                                des réponses pertinentes.
+                            </li>
+
+                            <li>
+                                Un modèle visuel avancé capable
+                                d'interpréter les images et de les
+                                décrire avec précision et en détail.
+                            </li>
+
+                            <li>
+                                Un modèle visuel plus léger consacré
+                                à la description rapide des images.
+                            </li>
+
+                            <li>
+                                Un modèle d'orchestration qui rassemble
+                                et combine les informations des trois
+                                autres modèles afin de produire des
+                                réponses claires, complètes et précises,
+                                notamment pour la description et la
+                                modification des images.
+                            </li>
+                        </ul>
+
+                        J'ai également intégré un système
+                        d'authentification avec gestion des noms
+                        d'utilisateur et un espace administrateur
+                        permettant de contrôler l'application
+                        de manière sécurisée et organisée.
+
+                        L'objectif de Vision AI est de se rapprocher,
+                        grâce à l'intégration de plusieurs modèles
+                        open source et à des fonctionnalités avancées,
+                        de l'expérience proposée par des systèmes
+                        tels que GPT.
+
+                        <br>
+
+                        <a href="https://vision-ai-vrpsebx6g7ac5w8hf9q68r.streamlit.app"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Tester Vision AI
+                        </a>
+                    </div>
+
+                    <!-- Projet 14 -->
+                    <div class="project">
+                        <strong>14. Vimeo AI — Génération de vidéos par intelligence artificielle</strong><br>
+
+                        J'ai développé une application appelée Vimeo AI,
+                        capable de générer des vidéos à partir d'images
+                        et de descriptions textuelles (prompts).
+
+                        L'application a été construite avec le framework
+                        Streamlit. Pour la gestion des utilisateurs,
+                        j'ai utilisé une base de données PostgreSQL.
+
+                        Pour accéder à l'application, l'utilisateur
+                        doit créer un compte et se connecter
+                        à l'aide de ses identifiants.
+
+                        <br>
+
+                        <a href="https://vimeo-ai.streamlit.app"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Tester Vimeo AI
+                        </a>
+                    </div>
+
+                    <!-- Projet 15 -->
+                    <div class="project">
+                        <strong>15. Veronica AI — Assistante virtuelle pour l'apprentissage des langues</strong><br>
+
+                        J'ai développé Veronica AI, une intelligence
+                        artificielle dotée d'une apparence humaine
+                        en 3D.
+
+                        Cette assistante virtuelle propose des cours
+                        dans différentes langues du monde et fournit
+                        des exercices pratiques pour aider les
+                        utilisateurs à progresser.
+
+                        Elle permet également de pratiquer
+                        les langues à l'oral grâce à des conversations
+                        interactives avec l'assistante virtuelle.
+
+                        <br>
+
+                        <a href="https://assistant-ai.wasmer.app"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Découvrir Veronica AI
+                        </a>
+                    </div>
+
+                    <!-- Projet 16 -->
+                    <div class="project">
+                        <strong>16. Game Runner Punk</strong><br>
+
+                        Jeu vidéo dans lequel le joueur doit
+                        progresser en évitant les différents
+                        obstacles rencontrés tout au long du parcours.
+
+                        <br>
+
+                        <a href="https://mmusafiri98.github.io/Game-Runner-Punk/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Jouer à Game Runner Punk
+                        </a>
+                    </div>
+
+                    <!-- Projet 17 -->
+                    <div class="project">
+                        <strong>17. Site web de beauté</strong><br>
+
+                        J'ai développé un site web consacré
+                        à la beauté et aux soins de la peau
+                        pour les femmes.
+
+                        Le site présente des produits cosmétiques,
+                        notamment des crèmes de beauté.
+                        Il a été réalisé avec HTML et CSS.
+
+                        <br>
+
+                        <a href="https://auio.netlify.app"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Découvrir le site de beauté
+                        </a>
+                    </div>
+
+                    <!-- Projet 18 -->
+                    <div class="project">
+                        <strong>18. My Music Studio — Création de vidéos musicales</strong><br>
+
+                        J'ai développé une application web permettant
+                        de créer des vidéos musicales personnalisées
+                        avec la pochette et le titre d'une chanson.
+
+                        L'application permet également aux artistes
+                        de créer des présentations pour leurs albums,
+                        d'ajouter l'audio de leurs chansons et
+                        d'intégrer les paroles directement dans
+                        les vidéos.
+
+                        <br>
+
+                        <a href="https://hobson-steve-my-music-track.wasmer.app/index.php"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+                            🔗 Découvrir My Music Studio
+                        </a>
+                    </div>
+
+                </div>
+            </div>
         </div>
-       
-
-      <div class="row gy-4">
-        <!-- Info Personali -->
-        <div class="col-12 col-lg-6">
-          <h3>Chi sono</h3>
-          <p>
-            Sono uno sviluppatore web appassionato della creazione di esperienze digitali moderne e interattive.
-            Mi piace lavorare con tecnologie come HTML, CSS, JavaScript, React e PHP.
-            Questo portfolio mostra i miei progetti e il mio percorso nello sviluppo web e software.
-          </p>
-
-          <h3>Formazione</h3>
-          <p><strong>Istituto Paul Hankar</strong><br>Diploma di sviluppatore web</p>
-          <p><strong>Université libre de Bruxelles</strong><br>Laurea in Informatica</p>
-          <p><strong>Université libre de Bruxelles</strong><br>Laurea in Scienze Farmaceutiche</p>
-          <p><strong>Istituto Velso Mucci</strong><br>Economia aziendale</p>
-
-          <h3>Esperienza</h3>
-          <p>
-            <strong>UI/UX Designer</strong> — Creazione di design moderni e intuitivi.<br>
-            <strong>Sviluppatore Web</strong> — Realizzazione di siti e applicazioni dinamiche.<br><br>
-
-            <strong>Sviluppatore Software</strong> — Creazione di applicazioni desktop moderne e funzionali.<br><br>
-
-            <strong>Sviluppatore in Intelligenza Artificiale</strong> — Creazione di modelli IA con
-            PyTorch e TensorFlow, integrazione API e web scraping.<br><br>
-
-            <strong>Sviluppatore Automazione</strong> — Creazione di sistemi automatizzati integrati
-            con Google Calendar, OpenAI, Gmail e altri servizi.
-          </p>
-        </div>
-
-        <!-- Competenze e Progetti -->
-        <div class="col-12 col-lg-6">
-          <h3>Competenze & Strumenti</h3>
-
-          <p><strong>Design e sviluppo No-code:</strong></p>
-          <div>
-            <span class="skill">Figma</span><span class="skill">Photoshop</span><span
-              class="skill">Illustrator</span><span class="skill">WordPress</span>
-          </div>
-          <p><strong>Linguaggi di sviluppo utilizzati:</strong></p>
-          <div>
-            <span class="skill">HTML</span><span class="skill">CSS</span><span
-              class="skill">JavaScript</span>
-            <span class="skill">PHP</span><span class="skill">Python</span><span class="skill">C++</span>
-            <span class="skill">SQL</span><span class="skill">PostgreSQL</span>
-          </div>
-
-          <p><strong>Frameworks:</strong></p>
-          <div>
-            <span class="skill">React.js</span><span class="skill">Node.js</span><span
-              class="skill">Flask</span>
-            <span class="skill">Laravel</span><span class="skill">TensorFlow</span><span
-              class="skill">PyTorch</span>
-            <span class="skill">Bootstrap</span><span class="skill">PyQt5</span><span
-              class="skill">Symfony</span>
-          </div>
-
-          <p><strong>Montaggio video:</strong></p>
-          <div>
-            <span class="skill">Filmora</span><span class="skill">Premiere Pro</span><span
-              class="skill">After Effects</span>
-            <span class="skill">CapCut</span><span class="skill">VideoMaker</span>
-          </div>
-
-          <h3>Progetti Personali</h3>
-
-        <!-- 
-      <p><strong>1. Sito Web di Viaggi con laravel come framework usato</strong><br>
-              Creato con Vite.js e Laravel. Gestione prenotazioni, commenti e integrazione di un assistente IA
-              (Cohere AI) per suggerire destinazioni e alloggi. Accesso sicuro e database MySQL.
-      </p>
--->
-
-          
-          <p><strong>1. Sito Web di Viaggi "Living Travel" con react.js come framework usato </strong><br>
-           Creato con React.js, un sito di viaggi che propone destinazioni agli utenti, mostrando prezzi, offerte e possibilità di prenotazione. Il backend in PHP gestisce le operazioni, come le prenotazioni e l’autenticazione degli utenti per accedere all’applicazione. È inoltre presente un’area admin dedicata alla gestione completa del sito.
-              <a href=https://mmusafiri98.github.io/oasis-holiday-fantastic-/" target="_blank" style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-            🔗 Clicca qui per vedere il progetto  "Living Travel
-            </a>
-          </p>
-
-         <p>
-  <strong>2. Motore di Ricerca Web con Intelligenza Artificiale jarvis AI</strong><br>
-  Sviluppato con html et css e javascript le API di Google e APi di cohere ai della societa cohere AI che ho migliorato il loro modelo per creare una mia versione chiamata jarvis  AI. Include jarvis AI, un  intelligenza artificiale capace di navigare sul web e dialogare con l’utente attraverso un’interfaccia di chat, effettuare ricerche sul web e inviare link pertinenti all’utente e capacie di aprire il browser all’utente  con il riconoscimento vocale.<br><br>
-  <a href=https://php-wcgi.wasmer.app/?" target="_blank" style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca qui per vedere il progetto
-  </a>
-</p>
-
-
-     
-
-          <p><strong>3. Imagine Generator AI</strong><br>
-            Applicazione IA per generare immagini  a partire dal testo dell utente. Backend Python (Torch, Diffusion Pipeline, Pillow) e frontend Streamlit.
-          </p>
-           <a href="https://huggingface.co/spaces/Muyumba/orion-ai?logs=container" target="_blank" style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca qui per vedere il progetto
-  </a>
-
-     
-          <p><strong>4. Sito E-commerce Scarpe</strong><br>
-            Sito sviluppato con html e css e javascript che propone delle scarpe da vendere online per un mercante di nome zack che va vendita di scarpe
-                  <a href="https://mmusafiri98.github.io/zack/" target="_blank" style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca qui per vedere il progetto sito  E-commerce Scarpe
-  </a>
-          </p>
-
-          <p><strong>5. Sito Dedicato alla citta di verduno chiamato Besarito</strong><br>
-            Realizzato con WordPress per promuovere la città ai turisti e un sito che ho realizzato con il mio amico besar che si trova a verduno.
-          </p>
-           <a href="https://wordpress-wyzc4.wasmer.app" target="_blank" style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca qui per vedere il progetto  Dedicato alla citta di verduno chiamato Besarito
-  </a>
-        <p>
-  <strong>
-    6. Sito per un ristorante francese chiamato "Les Délicieux Plateau", un progetto portafoglio 
-    in cui presento diversi menù ispirati all’universo gastronomico francese, con specialità 
-    rivisitate e proposte per il mattino, il pomeriggio e la sera.  
-    Il progetto è stato realizzato come compito scolastico per la valutazione, basato su un 
-    ristorante inventato.
-  </strong><br>
- 
-
-
-<a href="https://mmusafiri98.github.io/web-restaurant-/index.html" target="_blank" 
-   style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca qui per vedere il progetto di ristorazione "Les Délicieux Plateau"
-</a>
-</p>
-   <p>
-  <strong>
-    7. ho sviluppato un gioco di scacchi con html e css e javascript.
-  </strong><br>
- 
-
-
-<a href="https://mmusafiri98.github.io/chess-game-/" target="_blank" 
-   style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca qui per  giocare al gioco di scacchi 
-</a>
-</p>
-         <p>
-  <strong>
-    8. ho sviluppato un gioco di scacchi con html e css e javascript.
-  </strong><br>
- 
-
-
-<a href="https://mmusafiri98.github.io/chess-game-/" target="_blank" 
-   style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca qui per  giocare al gioco di scacchi 
-</a>
-</p>
-
-          <p><strong>9. Social Network </strong><br>
-            Creato con React.js,simile a facebook in cui gli utenti possono iscriversi e creare un account e condividre informazioni.
-          </p>
-            <p>
-  <strong>
-    <a href="https://netveb.netlify.app" target="_blank" 
-   style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    9. ho sviluppato un social network chiamato netveb.
-  </strong><br>
- 
-
-
-<a href="ping-pong.wasmer.app" target="_blank" 
-   style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca qui  per testare il gioco di  ping pong
-</a>
-</p>
-            <strong>
-    11. ho sviluppato un gioco di escape game  con html e css e javascript.
-  </strong><br>
- 
-
-
-<a href="https://mmusafiri98.github.io/gioco-di-Escape-game-/" target="_blank" 
-   style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca qui  per testare il gioco di  escape game
-</a>
-</p>
-                   <p><strong>
-    12. ho sviluppato un altro  gioco di escape game chiamato Labyrinth 2D  con html e css e javascript.
-  </strong><br>
- 
-
-
-<a href="https://labyrinth-2d.wasmer.app/" target="_blank" 
-   style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca qui  per testare il gioco di  escape game Labyrinth 2D
-</a>
-</p>
-              <p><strong>
-    13. ho sviluppato un gioco di Tetris  con html e css e javascript.
-  </strong><br>
- 
-
-
-<a href="https://mmusafiri98.github.io/Tetris-Game/" target="_blank" 
-   style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca qui  per testare il gioco di Tetris Game
-</a>
-</p>
-                        <p><strong>
-   13. Ho sviluppato un’intelligenza artificiale chiamata Vision AI, capace di analizzare immagini, descriverle in modo dettagliato e modificarle.
-Per questo progetto ho utilizzato il framework Streamlit, che mi ha permesso di creare l’applicazione e integrare le funzionalità dei vari modelli.
-
-Per rendere Vision AI più completa, ho combinato quattro modelli diversi:
-
-Un modello linguistico in grado di comprendere i testi inviati dall’utente, analizzare le emozioni e formulare risposte ragionate.
-
-Un modello visivo avanzato, capace di interpretare le immagini e descriverle in modo accurato e dettagliato.
-
-Un modello visivo più semplice, dedicato alla descrizione rapida delle immagini.
-
-Un modello di orchestrazione, che raccoglie e unifica le informazioni provenienti dagli altri tre modelli, producendo risposte chiare, complete e precise, soprattutto nelle descrizioni e modifiche delle immagini.
-
-Ho inoltre implementato un sistema di autenticazione con username, gestione degli utenti e un’area admin che permette di controllare l’applicazione in modo sicuro e organizzato.
-
-L’obiettivo di Vision AI è quello di avvicinarsi, attraverso l’integrazione di più modelli open-source e l’aggiunta di funzionalità avanzate, all’esperienza offerta da sistemi come GPT, migliorando la qualità dell’interazione con l’utente
-  </strong><br>
- 
-
-
-<a href="https://vision-ai-vrpsebx6g7ac5w8hf9q68r.streamlit.app" target="_blank" 
-   style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca qui  per testare  il modelo vision AI
-</a>
-</p>
-                                  <p><strong>
-   14. Ho sviluppato in questo progetto un modelo chiamato vimeo AI capacie di generare video a partire da imagini  e prompt per entrare nella pagina bisogna creare un account e accedere con il login
-    per construire l app ho usato il framework streamlit per la gestione user ho usato postresql per  il database                            
-  </strong><br>
- 
-
-
-<a href="https://vimeo-ai.streamlit.app" target="_blank" 
-   style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca qui  per testare per il modelo vimeo AI 
-</a>
-</p>
-                                             <p><strong>
-15 Ho sviluppato in questo progetto un modelo chiamato Veronica AI un intelligenza artificiale con l aspetto umano in 3d che capacie di dare corsi ai utenti in qualunque lingua del mondo e fornisce esercizi pratici per addestrare gli utenti 
-                                               e fornisci conversazioni in caso gli utenti vorrebbero praticare la lingua oralmente
-  </strong><br>
- 
-
-
-<a href="https://assistant-ai.wasmer.app" target="_blank" 
-   style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca qui  per testare il modelo veronica AI assitant virtual 
-</a>
-</p>
-                                                       <p><strong>
-16 Ho sviluppato un gioco chiama game runner punk in cui il gioca superare gli ostacoli che si trova durante il gioco
-  </strong><br>
- 
-
-
-<a href="https://mmusafiri98.github.io/Game-Runner-Punk/" target="_blank" 
-   style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca per testare il gioc Game runner punk 
-</a>
-</p>
-           <p><strong>
-17 Ho sviluppato n sito di bellezza per le donne in cui vengono vendute le creme di bellezza usando html e css 
-  </strong><br>
- 
-
-
-<a href="https://auio.netlify.app" target="_blank" 
-   style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca per  vedere il sito di bellezza per le donne
-</a>
-</p>
-                    <p><strong>
-18 Ho sviluppato un  applicazione web che permete di creare video musicale con la cover e il titolo della canzone lo si puo  fare per creare un album se si é un musicista
-                      con l audio della canzone l app si chiama My Music studio puoi caricare anche le parole della canzone nel video
-  </strong><br>
- 
-
-
-<a href="https://hobson-steve-my-music-track.wasmer.app/index.php" target="_blank" 
-   style="display:inline-block; background:linear-gradient(135deg, #4f46e5, #6366f1); color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    🔗 Clicca per  vedere my music track
-</a>
-</p>
-     
-     
-        </div>
-      </div>
     </div>
-  </div>
 
-  <!-- ✅ Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
-
 </html>
 
